@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn1
+        {
+            padding: 10px 20px;
+            background-color: blueviolet;
+            color: white;
+        }
+        .main
+        {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        h1 
+        {
+            font-size: 75px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>
+        </h1>
+        <button onclick="call()" class="btn1">
+            Run Timer
+        </button>
+        <button onclick="stop()">stop</button>
+    </div>
+</body>
+</html>
+
+<script>
+
+    function call()
+    {
+        timer=60;
+        time = setInterval(()=>{
+        timer--
+        if(timer<0)
+        {
+            clearInterval(id)
+        }
+        let id = document.querySelector("h1").innerText=timer
+    },1000)
+    }
+    
+    function stop()
+    {
+        clearInterval(time)
+    }
+    
+</script>
